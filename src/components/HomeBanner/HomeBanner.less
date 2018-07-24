@@ -1,0 +1,88 @@
+@charset 'UTF-8';
+/* ARROW */
+.slick-arrow {
+  position: absolute;
+  bottom: 0;
+  width: 60px;
+  height: 40px;
+  font-size: 0;
+  text-align: center;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  background: white;
+  //   box-shadow: 5px -5px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e8e8e8;
+  border-bottom: none;
+  cursor: pointer;
+}
+.slick-arrow:hover {
+  background-color: #fafafa;
+}
+.slick-arrow:before {
+  display: block;
+  font-family: "anticon" !important;
+  font-size: 16px;
+}
+.slick-next {
+  left: 60px;
+  border-left: none;
+}
+.slick-next:before {
+  content: "\E61B";
+}
+.slick-prev:before {
+  content: "\E61C";
+}
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  padding: 0 10px;
+  margin: 0;
+  list-style: none;
+}
+.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.slick-dots li button {
+  height: 20px;
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 0;
+}
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  line-height: 20px;
+  display: block;
+  width: 10px;
+  height: 3px;
+  background-color: #444;
+  border-radius: 2px;
+  content: "";
+  opacity: 0.25;
+  transition: linear all 0.3s;
+}
+.slick-dots li.slick-active button:before {
+  opacity: 0.75;
+  width: 40px;
+}

@@ -6,11 +6,12 @@
     "antd": "^3.6.5",
     "less": "^3.0.4",
     "moment": "^2.22.2",
+    "re-base": "3.2.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "1.1.4",
     "react-router-dom": "4.3.1",
-    "re-base": "3.2.3"
+    "react-scripts": "1.1.4",
+    "react-slick": "^0.23.1"
   },
   "scripts": {
     "start": "react-app-rewired start",

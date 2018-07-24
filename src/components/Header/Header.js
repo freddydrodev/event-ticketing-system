@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Layout } from "antd";
+import { Layout, Button } from "antd";
 import InfoHeader from "../InfoHeader/InfoHeader.js";
 import MenuRouter from "../MenuRouter/MenuRouter.js";
 import SearchBar from "../SearchBar/SearchBar.js";
@@ -22,6 +22,18 @@ class MainHeader extends Component {
         >
           <MenuRouter dataSource={menu} style={{ flex: 1 }} />
           <SearchBar />
+          <Button
+            icon={`plus`}
+            type={`primary`}
+            className={`h-100 border-0 rounded-0`}
+          >
+            View Card
+          </Button>
+          <Button
+            icon={`user`}
+            className={`h-100 border-0 rounded-0`}
+            style={{ width: "50px" }}
+          />
         </Header>
       </Layout>
     );
