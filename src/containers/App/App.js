@@ -3,7 +3,6 @@ import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import PrivatePage from "../PrivatePage/PrivatePage.js";
 import PublicPage from "../PublicPage/PublicPage.js";
-// import LogPage from "../LogPage/LogPage.js";
 import { app } from "../../config/base.js";
 import { Icon } from "../../../node_modules/antd";
 
