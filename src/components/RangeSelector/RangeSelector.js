@@ -1,10 +1,17 @@
 import React, { Component } from "react";
-import { Slider, InputNumber } from "antd";
+import { Slider, Row, Col } from "antd";
 
 class RangeSelector extends Component {
   state = {
-    defaultValue: [1, 1000],
-    values: [1, 1000]
+    defaultValue: [0, 1000],
+    values: [0, 1000],
+    marks: {
+      0: "0",
+      //   250: "250",
+      500: "500",
+      //   750: "750",
+      1000: "1000"
+    }
   };
 
   componentDidMount() {
@@ -17,46 +24,35 @@ class RangeSelector extends Component {
   }
 
   onChangeRangeHandler = value => {
-    console.log("object");
     this.setState({ values: value });
   };
 
-  onChangeInputHandler = (value, index) => {
-    const values = this.state.values;
-    values[index] = value;
-    console.log(values);
-    this.setState({ values });
-  };
   render() {
     const { title } = this.props;
-    const { defaultValue, values } = this.state;
+    const { defaultValue, values, marks } = this.state;
     return (
       <React.Fragment>
-        {title && <p className={`mt-3`}>{title}</p>}
-        <Slider
-          range={true}
-          defaultValue={defaultValue}
-          min={defaultValue[0]}
-          max={defaultValue[1]}
-          onChange={this.onChangeRangeHandler}
-          value={values}
-        />
-        <div className={`flex between`}>
-          <InputNumber
-            min={defaultValue[0]}
-            max={defaultValue[1]}
-            size={`small`}
-            value={values[0]}
-            onChange={value => this.onChangeInputHandler(value, 0)}
-          />
-          <InputNumber
-            min={defaultValue[0]}
-            max={defaultValue[1]}
-            size={`small`}
-            value={values[1]}
-            onChange={value => this.onChangeInputHandler(value, 1)}
-          />
-        </div>
+        {title && <p className={`mt-3 mb-0`}>{title}</p>}
+        <Row gutter={16} align={`center`} type={`flex`}>
+          <Col span={4} style={{ marginTop: 8 }}>
+            <p className={`m-0`}>Min</p>
+          </Col>
+          <Col span={16}>
+            <Slider
+              marks={marks}
+              range={true}
+              step={10}
+              defaultValue={defaultValue}
+              min={defaultValue[0]}
+              max={defaultValue[1]}
+              onChange={this.onChangeRangeHandler}
+              value={values}
+            />
+          </Col>
+          <Col span={4} style={{ marginTop: 8 }}>
+            <p className={`m-0`}>Max</p>
+          </Col>
+        </Row>
       </React.Fragment>
     );
   }
