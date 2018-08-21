@@ -14,7 +14,7 @@ const menu = [
 class MainHeader extends Component {
   render() {
     return (
-      <Layout>
+      <Layout className={`shadow`}>
         <InfoHeader />
         <Header
           className={`p-0 flex`}
