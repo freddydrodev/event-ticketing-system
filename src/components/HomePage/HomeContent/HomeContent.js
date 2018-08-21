@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import PerfectScrollbar from "react-perfect-scrollbar";
 import { Layout, Row, Col } from "antd";
 import TicketContent from "./TicketContent/TicketContent.js";
 

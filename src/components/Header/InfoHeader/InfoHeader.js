@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Icon } from "antd";
-import Marquee from "../Marquee/Marquee.js";
+import Marquee from "../../Marquee/Marquee.js";
 
 export default class InfoHeader extends Component {
   render() {

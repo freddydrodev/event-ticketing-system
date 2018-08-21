@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Layout, Input, DatePicker, TimePicker, Select } from "antd";
 import moment from "moment";
-import RangeSelector from "../RangeSelector/RangeSelector.js";
+import RangeSelector from "./RangeSelector/RangeSelector.js";
 
 const { Sider } = Layout;
 const { Option } = Select;

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Layout, Button } from "antd";
-import InfoHeader from "../InfoHeader/InfoHeader.js";
-import MenuRouter from "../MenuRouter/MenuRouter.js";
-import SearchBar from "../SearchBar/SearchBar.js";
+import InfoHeader from "./InfoHeader/InfoHeader.js";
+import MenuRouter from "./MenuRouter/MenuRouter.js";
+import SearchBar from "./SearchBar/SearchBar.js";
 
 const { Header } = Layout;
 const menu = [

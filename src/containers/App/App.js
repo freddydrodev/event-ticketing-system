@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-
+import { Icon } from "antd";
 import PrivatePage from "../PrivatePage/PrivatePage.js";
 import PublicPage from "../PublicPage/PublicPage.js";
 import { app } from "../../config/base.js";
-import { Icon } from "../../../node_modules/antd";
 
 export default class App extends Component {
   state = { user: null, loading: true };
