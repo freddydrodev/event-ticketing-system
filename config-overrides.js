@@ -16,7 +16,9 @@ module.exports = function override(config, env) {
       "@text-color": "#3E465B",
       "@font-size-base": "16px",
       "@layout-header-height": "50px",
-      "@layout-header-padding": 0
+      "@layout-header-padding": 0,
+      "@border-radius-base": 0,
+      "@border-radius-sm": 0
     },
     javascriptEnabled: true
   })(config, env);
